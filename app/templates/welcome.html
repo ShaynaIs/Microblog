@@ -1,0 +1,27 @@
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+{% extends 'bootstrap/base.html' %}app
+
+{% block title %}
+    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="../static/css/base.css">
+<style> body{background-image: url("../static/images/background.jpg");
+    background-repeat: no-repeat;}</style>
+
+<div class="right">
+    <p><img src="{{ url_for('static', filename='favicon.ico') }}"></p>
+    <h1>Welcome</h1>
+    <h7>Join today!</h7>
+    <div class="actions">
+        <a href="{{ url_for('auth.register') }}"><p class="button button-1">{{ _('Register') }}</p></a>
+        <a href="{{ url_for('auth.login') }}"><p class="button .button-1">{{ _('Login') }}</p></a>
+    </div>
+</div>
+
+
+
+{% endblock %}

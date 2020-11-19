@@ -1,0 +1,75 @@
+.right    {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    width: 65%;
+    margin-left: 40px;}
+
+.search{
+    display: none;}
+
+.post {
+    padding-top: 5px;}
+
+.profile {
+    float: left;
+    width: 270px;
+    border-right: 1px solid #ddd;}
+
+.user-posts {
+    float: right;
+    width: 70%;
+    margin-left: 10px;}
+
+h3 {
+    float: left;}
+
+h5 {
+    float: right;
+    margin-top: 13px;
+    border: 2px solid #eee;
+    padding: 10px 10px 0 10px;
+    border-radius: 10px;}
+
+.last-seen {
+    font-style: oblique;
+    font-size: 70%;}
+
+.user-posts table tbody tr td.picture{
+    display:none;}
+
+.post-picture{
+    width: 36px;
+    float: right;
+    left: 11px;
+    position: relative;}
+
+.said {
+    color: #ccc;}
+
+.button {
+    border: 1px solid navy;
+    border-radius: 10px;
+    padding:5px;
+    text-align: center;
+    width: 40%;
+    color: navy;}
+
+.button:hover {
+    background-color: navy;
+    color: white !important;}
+
+.button-1 {
+    background-color: navy;
+    color: white !important;
+    margin-top:15px;}
+
+.button-1:hover{
+    color: navy !important;
+    background-color: white;}
+
+.pager {
+    margin-top: 80px;}

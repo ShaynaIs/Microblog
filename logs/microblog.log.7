@@ -1,0 +1,75 @@
+2020-01-14 23:07:12,197 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:07:19,576 ERROR: Exception on /user/susan [GET] [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask_login\utils.py", line 228, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\main\routes.py", line 77, in user
+    next_url=next_url, prev_url=prev_url)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\templating.py", line 135, in render_template
+    context, ctx.app)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\templating.py", line 117, in _render
+    rv = template.render(context)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\templates\user.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block "doc"
+    {%- block html %}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block "html"
+    {% block body -%}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block "body"
+    {% block content -%}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\templates\base.html", line 55, in block "content"
+    {% block app_content %}{% endblock %}
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\templates\user.html", line 22, in block "app_content"
+    <p><a href="{{ url_for('main.send_message', recipient=user.username) }}">{{ _('Send private message') }}</a></p>
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\helpers.py", line 356, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\app.py", line 2061, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\flask\helpers.py", line 345, in url_for
+    force_external=external)
+  File "C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\venv\lib\site-packages\werkzeug\routing.py", line 1776, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'main.send_message' with values ['recipient']. Did you mean 'main.index' instead?
+2020-01-14 23:08:23,728 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:10:09,951 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:13:18,838 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:14:06,226 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:14:37,306 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:16:18,371 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:21:10,099 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:37:31,319 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:44:26,421 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:51:12,943 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:52:01,461 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:55:09,494 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:57:03,755 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-14 23:58:00,710 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-15 00:15:27,754 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-15 09:55:14,869 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
+2020-01-15 09:55:32,276 INFO: Microblog startup [in C:\Users\abris\Documents\ShaynaSchool\MCON104\microbog2\app\__init__.py:77]
